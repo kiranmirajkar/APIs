@@ -1,0 +1,1662 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "appStartedAt": {
+          "type": "string"
+        },
+        "position": {
+          "type": "object",
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "hdop": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "latitude",
+            "longitude",
+            "hdop"
+          ]
+        },
+        "testStartedAt": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "insideBuilding": {
+              "type": "boolean"
+            },
+            "floor": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "insideBuilding",
+            "floor",
+            "notes"
+          ]
+        },
+        "dltp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "playStartMilliSeconds": {
+              "type": "integer"
+            },
+            "playStartScore": {
+              "type": "integer"
+            },
+            "playoutRatio": {
+              "type": "number"
+            },
+            "playoutScore": {
+              "type": "integer"
+            },
+            "averageDownloadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageDownloadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "playStartMilliSeconds",
+            "playStartScore",
+            "playoutRatio",
+            "playoutScore",
+            "averageDownloadKiloBitsPerSecond",
+            "averageDownloadScore",
+            "overallScore"
+          ]
+        },
+        "ultp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "worstPing_mS": {
+              "type": "integer"
+            },
+            "worstPingScore": {
+              "type": "integer"
+            },
+            "imageSizeBytes": {
+              "type": "integer"
+            },
+            "averageUploadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageUploadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "worstPing_mS",
+            "worstPingScore",
+            "imageSizeBytes",
+            "averageUploadKiloBitsPerSecond",
+            "averageUploadScore",
+            "overallScore"
+          ]
+        },
+        "webPageTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "firstByteDelayMilliSecs": {
+              "type": "integer"
+            },
+            "pageDownloadTimeMs": {
+              "type": "integer"
+            },
+            "pageDownloadScore": {
+              "type": "integer"
+            },
+            "pageDownloadSizeBytes": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "firstByteDelayMilliSecs",
+            "pageDownloadTimeMs",
+            "pageDownloadScore",
+            "pageDownloadSizeBytes",
+            "overallScore"
+          ]
+        },
+        "voiceCallTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "callSetupMilliSecs": {
+              "type": "integer"
+            },
+            "callSetupScore": {
+              "type": "integer"
+            },
+            "callQuality": {
+              "type": "number"
+            },
+            "callQualityScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "callSetupMilliSecs",
+            "callSetupScore",
+            "callQuality",
+            "callQualityScore",
+            "overallScore"
+          ]
+        },
+        "rsrpReadings": {
+          "type": "object",
+          "properties": {
+            "averageRsrp": {
+              "type": "number"
+            },
+            "rsrpScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageRsrp",
+            "rsrpScore"
+          ]
+        },
+        "sinrReadings": {
+          "type": "object",
+          "properties": {
+            "averageSinr": {
+              "type": "number"
+            },
+            "sinrScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageSinr",
+            "sinrScore"
+          ]
+        },
+        "overallScore": {
+          "type": "number"
+        },
+        "device": {
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "deviceId": {
+              "type": "string"
+            },
+            "appVersion": {
+              "type": "string"
+            },
+            "appId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "manufacturer",
+            "model",
+            "version",
+            "deviceId",
+            "appVersion",
+            "appId"
+          ]
+        },
+        "barometerData": {
+          "type": "object",
+          "properties": {
+            "minimumHectopascals": {
+              "type": "number"
+            },
+            "maximumHectopascals": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "minimumHectopascals",
+            "maximumHectopascals"
+          ]
+        },
+        "fusedPosition": {
+          "type": "object",
+          "properties": {
+            "provider": {
+              "type": "string"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "horizAccuracy": {
+              "type": "number"
+            },
+            "altitude": {
+              "type": "number"
+            },
+            "vertAccuracy": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "provider",
+            "latitude",
+            "longitude",
+            "horizAccuracy",
+            "altitude",
+            "vertAccuracy"
+          ]
+        },
+        "wifiDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "ssid": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "frequency": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "ssid",
+                "rssi",
+                "frequency"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "ssid": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "frequency": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "ssid",
+                "rssi",
+                "frequency"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "ssid": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "frequency": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "ssid",
+                "rssi",
+                "frequency"
+              ]
+            }
+          ]
+        },
+        "bleDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "services": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "name",
+                "rssi",
+                "services"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "services": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "name",
+                "rssi",
+                "services"
+              ]
+            }
+          ]
+        },
+        "network": {
+          "type": "object",
+          "properties": {
+            "mcc": {
+              "type": "integer"
+            },
+            "mnc": {
+              "type": "integer"
+            },
+            "simProviderName": {
+              "type": "string"
+            },
+            "measurements": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "rsRp": {
+                      "type": "integer"
+                    },
+                    "rsrq": {
+                      "type": "integer"
+                    },
+                    "cqi": {
+                      "type": "integer"
+                    },
+                    "sinr": {
+                      "type": "integer"
+                    },
+                    "asu": {
+                      "type": "integer"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "eNodeB": {
+                      "type": "string"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "tac": {
+                      "type": "integer"
+                    },
+                    "earfcn": {
+                      "type": "integer"
+                    },
+                    "pci": {
+                      "type": "integer"
+                    },
+                    "isVoLteProvisioned": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "rsRp",
+                    "rsrq",
+                    "cqi",
+                    "sinr",
+                    "asu",
+                    "dBm",
+                    "eNodeB",
+                    "cid",
+                    "tac",
+                    "earfcn",
+                    "pci",
+                    "isVoLteProvisioned"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "lac": {
+                      "type": "integer"
+                    },
+                    "asuLevel": {
+                      "type": "integer"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "arfcn": {
+                      "type": "integer"
+                    },
+                    "bsic": {
+                      "type": "integer"
+                    },
+                    "timingAdvance": {
+                      "type": "integer"
+                    },
+                    "rssi": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "dBm",
+                    "cid",
+                    "lac",
+                    "asuLevel",
+                    "level",
+                    "arfcn",
+                    "bsic",
+                    "timingAdvance",
+                    "rssi"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "lac": {
+                      "type": "integer"
+                    },
+                    "psc": {
+                      "type": "integer"
+                    },
+                    "uarfcn": {
+                      "type": "integer"
+                    },
+                    "asuLevel": {
+                      "type": "integer"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "rscp": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "dBm",
+                    "cid",
+                    "lac",
+                    "psc",
+                    "uarfcn",
+                    "asuLevel",
+                    "level",
+                    "rscp"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "rsRp": {
+                      "type": "integer"
+                    },
+                    "rsrq": {
+                      "type": "integer"
+                    },
+                    "cqi": {
+                      "type": "integer"
+                    },
+                    "sinr": {
+                      "type": "integer"
+                    },
+                    "asu": {
+                      "type": "integer"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "eNodeB": {
+                      "type": "string"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "tac": {
+                      "type": "integer"
+                    },
+                    "earfcn": {
+                      "type": "integer"
+                    },
+                    "pci": {
+                      "type": "integer"
+                    },
+                    "isVoLteProvisioned": {
+                      "type": "boolean"
+                    },
+                    "nrCqi": {
+                      "type": "integer"
+                    },
+                    "nrAsuLevel": {
+                      "type": "integer"
+                    },
+                    "nrDBm": {
+                      "type": "integer"
+                    },
+                    "csi_Rsrp": {
+                      "type": "integer"
+                    },
+                    "csi_Rsrq": {
+                      "type": "integer"
+                    },
+                    "csi_Sinr": {
+                      "type": "integer"
+                    },
+                    "ss_Rsrp": {
+                      "type": "integer"
+                    },
+                    "ss_Rsrq": {
+                      "type": "integer"
+                    },
+                    "ss_Sinr": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "rsRp",
+                    "rsrq",
+                    "cqi",
+                    "sinr",
+                    "asu",
+                    "dBm",
+                    "eNodeB",
+                    "cid",
+                    "tac",
+                    "earfcn",
+                    "pci",
+                    "isVoLteProvisioned",
+                    "nrCqi",
+                    "nrAsuLevel",
+                    "nrDBm",
+                    "csi_Rsrp",
+                    "csi_Rsrq",
+                    "csi_Sinr",
+                    "ss_Rsrp",
+                    "ss_Rsrq",
+                    "ss_Sinr"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "mcc",
+            "mnc",
+            "simProviderName",
+            "measurements"
+          ]
+        }
+      },
+      "required": [
+        "appStartedAt",
+        "position",
+        "testStartedAt",
+        "details",
+        "dltp",
+        "ultp",
+        "webPageTest",
+        "voiceCallTest",
+        "rsrpReadings",
+        "sinrReadings",
+        "overallScore",
+        "device",
+        "barometerData",
+        "fusedPosition",
+        "wifiDevices",
+        "bleDevices",
+        "network"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "appStartedAt": {
+          "type": "string"
+        },
+        "position": {
+          "type": "object",
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "hdop": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "latitude",
+            "longitude",
+            "hdop"
+          ]
+        },
+        "testStartedAt": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "insideBuilding": {
+              "type": "boolean"
+            },
+            "floor": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "insideBuilding",
+            "floor",
+            "notes"
+          ]
+        },
+        "dltp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "playStartMilliSeconds": {
+              "type": "integer"
+            },
+            "playStartScore": {
+              "type": "integer"
+            },
+            "playoutRatio": {
+              "type": "number"
+            },
+            "playoutScore": {
+              "type": "integer"
+            },
+            "averageDownloadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageDownloadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "playStartMilliSeconds",
+            "playStartScore",
+            "playoutRatio",
+            "playoutScore",
+            "averageDownloadKiloBitsPerSecond",
+            "averageDownloadScore",
+            "overallScore"
+          ]
+        },
+        "ultp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "worstPing_mS": {
+              "type": "integer"
+            },
+            "worstPingScore": {
+              "type": "integer"
+            },
+            "imageSizeBytes": {
+              "type": "integer"
+            },
+            "averageUploadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageUploadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "worstPing_mS",
+            "worstPingScore",
+            "imageSizeBytes",
+            "averageUploadKiloBitsPerSecond",
+            "averageUploadScore",
+            "overallScore"
+          ]
+        },
+        "webPageTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "firstByteDelayMilliSecs": {
+              "type": "integer"
+            },
+            "pageDownloadTimeMs": {
+              "type": "integer"
+            },
+            "pageDownloadScore": {
+              "type": "integer"
+            },
+            "pageDownloadSizeBytes": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "firstByteDelayMilliSecs",
+            "pageDownloadTimeMs",
+            "pageDownloadScore",
+            "pageDownloadSizeBytes",
+            "overallScore"
+          ]
+        },
+        "voiceCallTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "callSetupMilliSecs": {
+              "type": "integer"
+            },
+            "callSetupScore": {
+              "type": "integer"
+            },
+            "callQuality": {
+              "type": "number"
+            },
+            "callQualityScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "callSetupMilliSecs",
+            "callSetupScore",
+            "callQuality",
+            "callQualityScore",
+            "overallScore"
+          ]
+        },
+        "rsrpReadings": {
+          "type": "object",
+          "properties": {
+            "averageRsrp": {
+              "type": "number"
+            },
+            "rsrpScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageRsrp",
+            "rsrpScore"
+          ]
+        },
+        "sinrReadings": {
+          "type": "object",
+          "properties": {
+            "averageSinr": {
+              "type": "number"
+            },
+            "sinrScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageSinr",
+            "sinrScore"
+          ]
+        },
+        "overallScore": {
+          "type": "number"
+        },
+        "device": {
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "deviceId": {
+              "type": "string"
+            },
+            "appVersion": {
+              "type": "string"
+            },
+            "appId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "manufacturer",
+            "model",
+            "version",
+            "deviceId",
+            "appVersion",
+            "appId"
+          ]
+        },
+        "barometerData": {
+          "type": "object",
+          "properties": {
+            "minimumHectopascals": {
+              "type": "number"
+            },
+            "maximumHectopascals": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "minimumHectopascals",
+            "maximumHectopascals"
+          ]
+        },
+        "fusedPosition": {
+          "type": "object",
+          "properties": {
+            "provider": {
+              "type": "string"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "horizAccuracy": {
+              "type": "number"
+            },
+            "altitude": {
+              "type": "number"
+            },
+            "vertAccuracy": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "provider",
+            "latitude",
+            "longitude",
+            "horizAccuracy",
+            "altitude",
+            "vertAccuracy"
+          ]
+        },
+        "wifiDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "ssid": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "frequency": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "ssid",
+                "rssi",
+                "frequency"
+              ]
+            }
+          ]
+        },
+        "bleDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "services": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "name",
+                "rssi",
+                "services"
+              ]
+            }
+          ]
+        },
+        "network": {
+          "type": "object",
+          "properties": {
+            "mcc": {
+              "type": "integer"
+            },
+            "mnc": {
+              "type": "integer"
+            },
+            "simProviderName": {
+              "type": "string"
+            },
+            "measurements": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "rsRp": {
+                      "type": "integer"
+                    },
+                    "rsrq": {
+                      "type": "integer"
+                    },
+                    "cqi": {
+                      "type": "integer"
+                    },
+                    "sinr": {
+                      "type": "integer"
+                    },
+                    "asu": {
+                      "type": "integer"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "eNodeB": {
+                      "type": "string"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "tac": {
+                      "type": "integer"
+                    },
+                    "earfcn": {
+                      "type": "integer"
+                    },
+                    "pci": {
+                      "type": "integer"
+                    },
+                    "isVoLteProvisioned": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "rsRp",
+                    "rsrq",
+                    "cqi",
+                    "sinr",
+                    "asu",
+                    "dBm",
+                    "eNodeB",
+                    "cid",
+                    "tac",
+                    "earfcn",
+                    "pci",
+                    "isVoLteProvisioned"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "mcc",
+            "mnc",
+            "simProviderName",
+            "measurements"
+          ]
+        }
+      },
+      "required": [
+        "appStartedAt",
+        "position",
+        "testStartedAt",
+        "details",
+        "dltp",
+        "ultp",
+        "webPageTest",
+        "voiceCallTest",
+        "rsrpReadings",
+        "sinrReadings",
+        "overallScore",
+        "device",
+        "barometerData",
+        "fusedPosition",
+        "wifiDevices",
+        "bleDevices",
+        "network"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "appStartedAt": {
+          "type": "string"
+        },
+        "position": {
+          "type": "object",
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "hdop": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "latitude",
+            "longitude",
+            "hdop"
+          ]
+        },
+        "testStartedAt": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "insideBuilding": {
+              "type": "boolean"
+            },
+            "floor": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "insideBuilding",
+            "floor",
+            "notes"
+          ]
+        },
+        "dltp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "playStartMilliSeconds": {
+              "type": "integer"
+            },
+            "playStartScore": {
+              "type": "integer"
+            },
+            "playoutRatio": {
+              "type": "number"
+            },
+            "playoutScore": {
+              "type": "integer"
+            },
+            "averageDownloadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageDownloadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "playStartMilliSeconds",
+            "playStartScore",
+            "playoutRatio",
+            "playoutScore",
+            "averageDownloadKiloBitsPerSecond",
+            "averageDownloadScore",
+            "overallScore"
+          ]
+        },
+        "ultp": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "worstPing_mS": {
+              "type": "integer"
+            },
+            "worstPingScore": {
+              "type": "integer"
+            },
+            "imageSizeBytes": {
+              "type": "integer"
+            },
+            "averageUploadKiloBitsPerSecond": {
+              "type": "integer"
+            },
+            "averageUploadScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "worstPing_mS",
+            "worstPingScore",
+            "imageSizeBytes",
+            "averageUploadKiloBitsPerSecond",
+            "averageUploadScore",
+            "overallScore"
+          ]
+        },
+        "webPageTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "firstByteDelayMilliSecs": {
+              "type": "integer"
+            },
+            "pageDownloadTimeMs": {
+              "type": "integer"
+            },
+            "pageDownloadScore": {
+              "type": "integer"
+            },
+            "pageDownloadSizeBytes": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "firstByteDelayMilliSecs",
+            "pageDownloadTimeMs",
+            "pageDownloadScore",
+            "pageDownloadSizeBytes",
+            "overallScore"
+          ]
+        },
+        "voiceCallTest": {
+          "type": "object",
+          "properties": {
+            "testRanAtUtc": {
+              "type": "string"
+            },
+            "callSetupMilliSecs": {
+              "type": "integer"
+            },
+            "callSetupScore": {
+              "type": "integer"
+            },
+            "callQuality": {
+              "type": "number"
+            },
+            "callQualityScore": {
+              "type": "integer"
+            },
+            "overallScore": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "testRanAtUtc",
+            "callSetupMilliSecs",
+            "callSetupScore",
+            "callQuality",
+            "callQualityScore",
+            "overallScore"
+          ]
+        },
+        "rsrpReadings": {
+          "type": "object",
+          "properties": {
+            "averageRsrp": {
+              "type": "number"
+            },
+            "rsrpScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageRsrp",
+            "rsrpScore"
+          ]
+        },
+        "sinrReadings": {
+          "type": "object",
+          "properties": {
+            "averageSinr": {
+              "type": "number"
+            },
+            "sinrScore": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "averageSinr",
+            "sinrScore"
+          ]
+        },
+        "overallScore": {
+          "type": "number"
+        },
+        "device": {
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "deviceId": {
+              "type": "string"
+            },
+            "appVersion": {
+              "type": "string"
+            },
+            "appId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "manufacturer",
+            "model",
+            "version",
+            "deviceId",
+            "appVersion",
+            "appId"
+          ]
+        },
+        "barometerData": {
+          "type": "object",
+          "properties": {
+            "minimumHectopascals": {
+              "type": "number"
+            },
+            "maximumHectopascals": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "minimumHectopascals",
+            "maximumHectopascals"
+          ]
+        },
+        "fusedPosition": {
+          "type": "object",
+          "properties": {
+            "provider": {
+              "type": "string"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "horizAccuracy": {
+              "type": "number"
+            },
+            "altitude": {
+              "type": "number"
+            },
+            "vertAccuracy": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "provider",
+            "latitude",
+            "longitude",
+            "horizAccuracy",
+            "altitude",
+            "vertAccuracy"
+          ]
+        },
+        "wifiDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "ssid": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "frequency": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "ssid",
+                "rssi",
+                "frequency"
+              ]
+            }
+          ]
+        },
+        "bleDevices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "rssi": {
+                  "type": "integer"
+                },
+                "services": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "name",
+                "rssi",
+                "services"
+              ]
+            }
+          ]
+        },
+        "network": {
+          "type": "object",
+          "properties": {
+            "mcc": {
+              "type": "integer"
+            },
+            "mnc": {
+              "type": "integer"
+            },
+            "simProviderName": {
+              "type": "string"
+            },
+            "measurements": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "timeStamp": {
+                      "type": "string"
+                    },
+                    "connectionType": {
+                      "type": "string"
+                    },
+                    "rsRp": {
+                      "type": "integer"
+                    },
+                    "rsrq": {
+                      "type": "integer"
+                    },
+                    "cqi": {
+                      "type": "integer"
+                    },
+                    "sinr": {
+                      "type": "integer"
+                    },
+                    "asu": {
+                      "type": "integer"
+                    },
+                    "dBm": {
+                      "type": "integer"
+                    },
+                    "eNodeB": {
+                      "type": "string"
+                    },
+                    "cid": {
+                      "type": "string"
+                    },
+                    "tac": {
+                      "type": "integer"
+                    },
+                    "earfcn": {
+                      "type": "integer"
+                    },
+                    "pci": {
+                      "type": "integer"
+                    },
+                    "isVoLteProvisioned": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "timeStamp",
+                    "connectionType",
+                    "rsRp",
+                    "rsrq",
+                    "cqi",
+                    "sinr",
+                    "asu",
+                    "dBm",
+                    "eNodeB",
+                    "cid",
+                    "tac",
+                    "earfcn",
+                    "pci",
+                    "isVoLteProvisioned"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "mcc",
+            "mnc",
+            "simProviderName",
+            "measurements"
+          ]
+        }
+      },
+      "required": [
+        "appStartedAt",
+        "position",
+        "testStartedAt",
+        "details",
+        "dltp",
+        "ultp",
+        "webPageTest",
+        "voiceCallTest",
+        "rsrpReadings",
+        "sinrReadings",
+        "overallScore",
+        "device",
+        "barometerData",
+        "fusedPosition",
+        "wifiDevices",
+        "bleDevices",
+        "network"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "details": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "bitrate": {
+          "type": "integer"
+        },
+        "approxDurationMs": {
+          "type": "string"
+        },
+        "audioSampleRate": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "string"
+        },
+        "fps": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "qualityLabel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "bitrate",
+        "approxDurationMs",
+        "audioSampleRate",
+        "contentLength",
+        "fps",
+        "height",
+        "width",
+        "qualityLabel"
+      ]
+    }
+  },
+  "required": [
+    "details"
+  ]
+}
